@@ -15,12 +15,12 @@ import com.opensymphony.xwork2.ActionSupport;
 public class HelloWorldAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
-	
 	/**
 	 * The model class that stores the message
 	 * to display in the view.
 	 */
 	private MessageStore messageStore;	
+	private static int helloCount = 0;
 	/*
 	 * Creates the MessageStore model object and 
 	 * returns success.  The MessageStore model
@@ -29,11 +29,19 @@ public class HelloWorldAction extends ActionSupport {
 	 * @see com.opensymphony.xwork2.ActionSupport#execute()
 	 */
 	public String execute() throws Exception {
-		
 		messageStore = new MessageStore() ;
+		helloCount++;
 		return SUCCESS;
 	}
 	
+	public int getHelloCount() {
+		return helloCount;
+	}
+
+	public void setHelloCount(int helloCount) {
+		HelloWorldAction.helloCount = helloCount;
+	}
+
 	public MessageStore getMessageStore() {
 		return messageStore;
 	}

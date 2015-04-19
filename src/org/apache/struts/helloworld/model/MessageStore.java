@@ -8,15 +8,12 @@ package org.apache.struts.helloworld.model;
 public class MessageStore {
 	
 	private String message;
-	private String name;
-	
-	public String getName() {
-		return name;
+
+	@Override
+	public String toString() {
+		return "MessageStore [message=" + message + "]";
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public MessageStore() {
 		

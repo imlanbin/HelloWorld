@@ -11,5 +11,7 @@
 <h1>Congratulations!</h1>
 <h3>This is HelloWorld.jsp</h3>
 <h3>Message:<s:property value="messageStore.message" /></h3><br>
-</body>
-</html>
+<p>I've said hello <s:property value="helloCount" /> times!</p>
+<p><s:property value="messageStore"/></p>
+</body>	
+</html>		
