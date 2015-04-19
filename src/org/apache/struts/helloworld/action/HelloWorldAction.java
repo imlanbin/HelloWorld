@@ -20,6 +20,7 @@ public class HelloWorldAction extends ActionSupport {
 	 * to display in the view.
 	 */
 	private MessageStore messageStore;	
+	private String userName;
 	private static int helloCount = 0;
 	/*
 	 * Creates the MessageStore model object and 
@@ -31,6 +32,9 @@ public class HelloWorldAction extends ActionSupport {
 	public String execute() throws Exception {
 		messageStore = new MessageStore() ;
 		helloCount++;
+		if (userName != null) {
+			messageStore.setMessage(messageStore.getMessage()+" "+userName);
+		}
 		return SUCCESS;
 	}
 	
@@ -40,6 +44,14 @@ public class HelloWorldAction extends ActionSupport {
 
 	public void setHelloCount(int helloCount) {
 		HelloWorldAction.helloCount = helloCount;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public MessageStore getMessageStore() {
