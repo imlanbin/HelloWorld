@@ -17,7 +17,8 @@ public class Person
     private String residency;
     private boolean over21;
     private String [] carModels;
- 
+    private String email;
+    private String phoneNumber;
 
     public String getFirstName()
     {
@@ -93,4 +94,20 @@ public class Person
         " Car models: " + Arrays.asList( getCarModels() ) ;
         
     }
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 }
