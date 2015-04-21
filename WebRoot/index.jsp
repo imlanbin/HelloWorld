@@ -5,22 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Basic Struts 2 Application - Welcome</title>
+<title>Struts 2 Form Tags - Welcome</title>
 </head>
 <body>
 <h1>Welcome To Struts 2!</h1>
-<h3>This is index.jsp</h3>
- 
-<p><a href="<s:url action='hello'/>">Hello World</a><br></p>
-<s:url action="hello" var="helloLink">
-	<s:param name="userName">Bruce Phillips</s:param>
-</s:url>
-<p><a href="${helloLink}">Hello Bruce Phillips</a></p>
 
-<p>Get your own personal hello by filling out and submitting this form.</p>
-<s:form action="hello">
-	<s:textfield name="userName" label="Your name"/>
-	<s:submit value="Submit"/>
-</s:form>
+<p><a href='<s:url action="edit" />' >Edit your information</a></p>
+
 </body>
 </html>
